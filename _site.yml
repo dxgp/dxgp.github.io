@@ -1,13 +1,13 @@
 name: "blog"
-title: "dxgp's Blog"
+title: "dxgp"
 description: |
   A blog for anything and everything we find interesting.
 output_dir: "docs"
 base_url: https://dxgp.github.io/blog/
-favicon: data/user_image.png
+favicon: data/user_image2.png
 navbar:
   logo:
-    image: data/user_image.png
+    image: data/user_image2.png
   left:
     - text: "About Me"
       href: about.html
