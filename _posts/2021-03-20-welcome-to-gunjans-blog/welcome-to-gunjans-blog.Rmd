@@ -17,7 +17,7 @@ r2d3(d3_version = 4, script = "voronoi.js")
 
 ```{r}
 library(r2d3)
-r2d3(d3_version = 4, script = "calendar.js")
+r2d3(data = read.csv("dji-latest.csv"), d3_version = 4, container = "div", options = list(start = 2006, end = 2011), script = "calendar.js")
 ```
 
 
