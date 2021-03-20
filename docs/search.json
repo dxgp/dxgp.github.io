@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "I just created this shitty blog for the lulz.",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-20T10:36:21+05:30"
+    },
+    {
+      "path": "index.html",
+      "title": "Gunjan's Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-20T10:36:21+05:30"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
