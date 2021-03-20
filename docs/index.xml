@@ -14,6 +14,15 @@
     <generator>Distill</generator>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Notes on David MacKay's Information Theory, Inference and Learning Algorithms</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <dc:creator>Ambuj Gupta</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-03-20-notes-on-david-mackays-information-theory-inference-and-learning-algorithms</link>
+      <description>I recently started reading David MacKay's book and this blog post will contain my notes and thoughts on the book. I plan on using Mathematica for basic plotting and calculations.</description>
+      <guid>https://dxgp.github.io/posts/2021-03-20-notes-on-david-mackays-information-theory-inference-and-learning-algorithms</guid>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Welcome to the Blog</title>
       <dc:creator>Gunjan Payal</dc:creator>
       <dc:creator>Ambuj Gupta</dc:creator>

@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-03-20-notes-on-david-mackays-information-theory-inference-and-learning-algorithms/",
+    "title": "Notes on David MacKay's Information Theory, Inference and Learning Algorithms",
+    "description": "I recently started reading David MacKay's book and this blog post will contain my notes and thoughts on the book. I plan on using Mathematica for basic plotting and calculations.",
+    "author": [
+      {
+        "name": "Gunjan Payal",
+        "url": {}
+      },
+      {
+        "name": "Ambuj Gupta",
+        "url": {}
+      }
+    ],
+    "date": "2021-03-20",
+    "categories": [],
+    "contents": "\nOkay, let’s start with the basics.\nWhy on Earth are you using Mathematica?\nI’m usually a MATLAB person, primarily because that’s what is used at our college. I got very comfortable with MATLAB and until a couple of months ago, I didn’t have a preference.\nHowever, when I started focusing on the mathematical , MATLAB became a huge pain in my ass. Yes, MATLAB has notebooks. Yes, MATLAB has markdown support. Yes, MATLAB is very efficient because it’s built on top of FORTRAN. Yes, MATLAB has a huge user base. But here’s where the problem begins. MATLAB did not start out this way. It didn’t really have notebooks and stuff. Over the years, MATLAB has gotten INCREDIBLY messy. I mean, the syntax is so clunky, it makes my blood boil.\nHere’s a question that crosses my mind: who is MATLAB perfect for?\nWhat’s a use case where MATLAB wins, hands down? The answer was very simple in 2007. Anyone involved in data analytics or numerical computation would have used MATLAB. However, a lot has changed since 2007. All the cool kids are now using Python (pioneers are switching to Julia though) and the number of python libraries is absolutely gigantic. So, if I’m involved in data analytics, MATLAB is not the optimal choice anymore.\n\nPython came into the spotlight in 2007\nIf we take a look at the popularity of programming languages 1, python has witnessed immense growth (from ~4% in 2006 to ~30% in 2021). MATLAB on the other hand, has witnessed a decline (~3% in 2006 to ~2% in 2021). Now, here’s what people will say:\n\nGee, MATLAB may have witnessed a 1% decline but Wolfram didn’t even make the list. LOL.\n\nThat’s just plain stupid! Wolfram lies in a different category. MATLAB is marketed as: “Math. Graphics. Programming.” 2 MATLAB markets itself as:\n\nMATLAB is a programming and numeric computing platform used by millions of engineers and scientists to analyze data, develop algorithms, and create models.\n\n\nhttps://pypl.github.io/PYPL.html↩︎\nhttps://www.mathworks.com/products/matlab.html↩︎\n",
+    "preview": {},
+    "last_modified": "2021-03-20T23:15:51+05:30",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-03-20-welcome-to-gunjans-blog/",
     "title": "Welcome to the Blog",
     "description": "Let's give this a whirl.",
