@@ -14,10 +14,11 @@
     <generator>Distill</generator>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Welcome to Gunjan's Blog</title>
+      <title>Welcome to the Blog</title>
       <dc:creator>Gunjan Payal</dc:creator>
+      <dc:creator>Ambuj Gupta</dc:creator>
       <link>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</link>
-      <description>A short description of the post.</description>
+      <description>Let's give this a whirl.</description>
       <guid>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</guid>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
     </item>

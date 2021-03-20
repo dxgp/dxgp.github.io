@@ -1,8 +1,8 @@
 ---
-title: "Welcome to Gunjan's Blog"
+title: "Welcome to the Blog"
 description: |
-  A short description of the post.
-author: "Gunjan Payal"
+  Let's give this a whirl.
+author: ["Gunjan Payal","Ambuj Gupta"]
 date: 03-20-2021
 output:
   distill::distill_article:
