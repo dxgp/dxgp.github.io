@@ -2,14 +2,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>dxgp</title>
-    <link>https://dxgp.github.io/</link>
-    <atom:link href="https://dxgp.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    <link>https://dxgp.github.io/blog/</link>
+    <atom:link href="https://dxgp.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
     <description>A blog for anything and everything we find interesting.
 </description>
     <image>
       <title>dxgp</title>
-      <url>https://dxgp.github.io/data/main_logo.png</url>
-      <link>https://dxgp.github.io/</link>
+      <url>https://dxgp.github.io/blog/data/main_logo.png</url>
+      <link>https://dxgp.github.io/blog/</link>
     </image>
     <generator>Distill</generator>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
@@ -17,9 +17,9 @@
       <title>Welcome to the Blog</title>
       <dc:creator>Gunjan Payal</dc:creator>
       <dc:creator>Ambuj Gupta</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-03-20-welcome-to-gunjans-blog</link>
+      <link>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</link>
       <description>Let's give this a whirl.</description>
-      <guid>https://dxgp.github.io/posts/2021-03-20-welcome-to-gunjans-blog</guid>
+      <guid>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</guid>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>
