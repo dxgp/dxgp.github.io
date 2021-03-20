@@ -5,9 +5,8 @@ description: |
 output_dir: "docs"
 base_url: https://dxgp.github.io/blog/
 favicon: data/user_image2.png
+theme: theme.css
 navbar:
-  logo:
-    image: data/user_image2.png
   left:
     - text: "About Me"
       href: about.html
