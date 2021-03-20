@@ -10,6 +10,12 @@ output:
 ---
 
 
+```{r}
+library(r2d3)
+r2d3(d3_version = 4, script = "voronoi.js")
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
