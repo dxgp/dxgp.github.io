@@ -2,14 +2,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>dxgp</title>
-    <link>https://dxgp.github.io/blog/</link>
-    <atom:link href="https://dxgp.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+    <link>https://dxgp.github.io/</link>
+    <atom:link href="https://dxgp.github.io/index.xml" rel="self" type="application/rss+xml"/>
     <description>A blog for anything and everything we find interesting.
 </description>
     <image>
       <title>dxgp</title>
-      <url>https://dxgp.github.io/blog/data/main_logo.png</url>
-      <link>https://dxgp.github.io/blog/</link>
+      <url>https://dxgp.github.io/data/main_logo.png</url>
+      <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
@@ -17,57 +17,10 @@
       <title>Welcome to the Blog</title>
       <dc:creator>Gunjan Payal</dc:creator>
       <dc:creator>Ambuj Gupta</dc:creator>
-      <link>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</link>
+      <link>https://dxgp.github.io/posts/2021-03-20-welcome-to-gunjans-blog</link>
       <description>Let's give this a whirl.</description>
-      <guid>https://dxgp.github.io/blog/posts/2021-03-20-welcome-to-gunjans-blog</guid>
+      <guid>https://dxgp.github.io/posts/2021-03-20-welcome-to-gunjans-blog</guid>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bigger, nflfastR, dbplyr</title>
-      <dc:creator>Thomas Mock</dc:creator>
-      <link>https://dxgp.github.io/blog/posts/2019-04-28-nflfastr-dbplyr-rsqlite</link>
-      <description>Doing more with dplyr and SQL</description>
-      <category>NFL</category>
-      <category>nflscrapR</category>
-      <category>nflfastR</category>
-      <category>SQL</category>
-      <category>tidyverse</category>
-      <guid>https://dxgp.github.io/blog/posts/2019-04-28-nflfastr-dbplyr-rsqlite</guid>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1526&amp;q=80" medium="image" type="text/plain"/>
-    </item>
-    <item>
-      <title>Beer and pdftools - a vignette</title>
-      <dc:creator>Thomas Mock</dc:creator>
-      <link>https://dxgp.github.io/blog/posts/2020-04-03-beer-and-pdftools-a-vignette</link>
-      <description>A guide to extracting tables from many PDFs using the pdftools package</description>
-      <guid>https://dxgp.github.io/blog/posts/2020-04-03-beer-and-pdftools-a-vignette</guid>
-      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://dxgp.github.io/blog/posts/2020-04-03-beer-and-pdftools-a-vignette/beer-kegs.jpeg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Add a logo to your plot</title>
-      <dc:creator>Thomas Mock</dc:creator>
-      <link>https://dxgp.github.io/blog/posts/2019-01-09-add-a-logo-to-your-plot</link>
-      <description>Put a bird on it - Portlandia.</description>
-      <category>magick</category>
-      <category>data visualization</category>
-      <category>ggplot2</category>
-      <guid>https://dxgp.github.io/blog/posts/2019-01-09-add-a-logo-to-your-plot</guid>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" medium="image" type="text/plain"/>
-    </item>
-    <item>
-      <title>TidyTuesday enhancements</title>
-      <dc:creator>Thomas Mock</dc:creator>
-      <link>https://dxgp.github.io/blog/posts/2019-01-02-tidytuesday-enhancements</link>
-      <description>Making #TidyTuesday better.</description>
-      <category>TidyTuesday</category>
-      <category>tidyverse</category>
-      <category>Automation</category>
-      <guid>https://dxgp.github.io/blog/posts/2019-01-02-tidytuesday-enhancements</guid>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/static/tt_logo.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
