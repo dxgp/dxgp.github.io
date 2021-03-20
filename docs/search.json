@@ -6,14 +6,14 @@
       "description": "A blog for anything and everything we find interesting.",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-20T23:16:00+05:30"
+      "last_modified": "2021-03-21T02:17:01+05:30"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-20T23:16:01+05:30"
+      "last_modified": "2021-03-21T02:17:01+05:30"
     }
   ],
   "collections": ["posts/posts.json"]
