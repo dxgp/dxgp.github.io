@@ -6,6 +6,13 @@ output_dir: "docs"
 base_url: https://dxgp.github.io/blog/
 favicon: data/main_logo.png
 theme: theme.css
+google_analytics: "G-Q7JZ57QMKN"
+cookie_consent:
+  style: simple
+  type: express
+  palette: light
+  lang: en
+  cookies_policy: url
 navbar:
   left:
     - text: "About Me"
