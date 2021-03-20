@@ -1,7 +1,7 @@
 ---
 title: "About this blog"
 description: |
-  I just created this shitty blog for the lulz.
+  A blog for anything and everything we find interesting.
 ---
 
 ```{r setup, include=FALSE}

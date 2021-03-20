@@ -1,9 +1,9 @@
-name: "blog-final"
-title: "Gunjan's Blog"
+name: "blog"
+title: "dxgp's Blog"
 description: |
-  Gunjan's Blog
+  A blog for anything and everything we find interesting.
 output_dir: "docs"
-base_url: https://gunjan-payal.github.io/blog-final/
+base_url: https://dxgp.github.io/blog/
 favicon: data/user_image.png
 navbar:
   logo:
@@ -11,6 +11,4 @@ navbar:
   left:
     - text: "About Me"
       href: about.html
-    - text: "CV"
-      href: data/pdfs/CV.pdf
 output: distill::distill_article

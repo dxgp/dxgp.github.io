@@ -1,9 +1,0 @@
----
-title: "About this blog"
-description: |
-  I just created this shitty blog for the lulz.
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
