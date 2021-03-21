@@ -65,7 +65,7 @@ Sometimes, I just can't resist the temptation to dive into a completely differen
 * Nonlinear Dynamics and Chaos by Strogatz
 
 ## Concluding Remarks
-My reading list is fairly small. That's because we have vastly different courses that are currently going on in our college and I do have assignments to complete and exams to give.
+My reading list is fairly small. That's because we have vastly different courses that are currently going on in our college and I do have assignments to complete and exams to take.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
