@@ -1,0 +1,71 @@
+---
+title: "Reading List 2021"
+description: |
+  Just a list of books that I plan on finishing by the end of 2021.
+author:
+  - name: Gunjan Payal
+    url: {}
+date: 03-21-2021
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+---
+## Mathematics
+I've spent a long time thinking about whether math is necessary for machine learning. Here's my answer: _absolutely_. Here's the counter argument I've heard:
+
+> People have already made libraries for machine learning. I can just use models that have already been created.
+
+That's a great argument **_if all you want to do is create a Pokèmon classifier_**. If you actually want to apply machine learning to problems that are genuinely interesting and make a contribution, you have to know the math and the underlying theory. You have to know the limits of machine learning. Contrary to popular belief, machine learning is not ACTUALLY magic. Neural networks are not the solution to everything. It's problem dependent. This is from the point of view of a guy who wants to go into research. If that's not your goal, you can get away with knowing a lot less math than this.
+
+> Unless you're comfortable with the math, you're going to crap your pants while reading research papers. Also, math's applicable EVERYWHERE. So, you don't really lose anything.
+
+For a demonstration of crapping your pants, take a gander at this paper^[https://arxiv.org/abs/2007.10412]. If you can understand the math in there, you're good to go. Here's a little preview:
+
+$${\sum_{t=1}^T  \mathcal S_{P^{\phi_t}} \left[\frac{\partial L}{\partial \phi_{t}}\right] \sum_{i=1}^{t} \big(\prod_{j = i}^{t-1} \frac{\partial \phi_{j+1}}{\partial \phi_j}\big) \mathcal S_{P^{\phi_{i-1}}} \left[\frac{\partial \phi_i}  {\partial  C_{i-1}}\right]\frac{\partial  C_{i-1}}{\partial \theta}\,.}$$
+
+Intimidating, right?
+
+
+I'll conclude this rant with my math reading list for 2021:
+
+* Analysis I and II by Terence Tao
+* Information Theory, Inference, and Learning Algorithms by David MacKay
+* The Cauchy Schwarz Master Class by J. Michael Steele
+* Linear Algebra and Learning from Data by Gilbert Strang (Just the last section, I know the rest)
+* Visual Group Theory (MAA Problem Book Series) by Nathan Carter
+
+<aside>Why group theory? Because it often pops up at unexpected places and I think it's cool.</aside>
+
+For the last book, there's a great accompanying course on YT. I'll add the link to it in a few days. This year is going to be math heavy and that's a bit of a problem because people usually only look at your _projects_ and I don't really have projects yet. I've tried making a CV a few times but I come up empty. Hopefully, it won't be empty by the end of this year.
+
+I did consider Rudin for Analysis but I liked Tao's style better.
+
+## Machine Learning
+
+I do need to apply all that math. Here's my machine learning reading list. I should warn you that this is fairly intermediate because I read the basic stuff about a year ago. 
+
+* The Elements of Statistical Learning by Hastie et al.
+* Deep Learning by Ian Goodfellow
+* Tensorflow Documentation
+* The Nature of Statistical Learning Theory by Vladimir N. Vapnik
+
+## Other Books that I Think Might be Worth Reading
+
+Sometimes, I just can't resist the temptation to dive into a completely different field. I have the attention span of a 10 year old. That said, here's the books that I can't wait to read:
+
+* Programming Quantum Computers by Johnston
+* Nonlinear Dynamics and Chaos by Strogatz
+
+## Concluding Remarks
+My reading list is fairly small. That's because we have vastly different courses that are currently going on in our college and I do have assignments to complete and exams to give.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+

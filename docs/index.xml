@@ -12,7 +12,15 @@
       <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Reading List 2021</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-03-21-reading-list-2021</link>
+      <description>Just a list of books that I plan on finishing by the end of 2021.</description>
+      <guid>https://dxgp.github.io/posts/2021-03-21-reading-list-2021</guid>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Notes on David MacKay's Information Theory, Inference and Learning Algorithms</title>
       <dc:creator>Gunjan Payal</dc:creator>
