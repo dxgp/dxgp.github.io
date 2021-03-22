@@ -1,0 +1,14 @@
+---
+title: "Courses"
+description: |
+  A list of good online courses and lectures.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+1. EXA 1029
+2. EXA 2201
+3. EXA 221
+4. EXA 229
