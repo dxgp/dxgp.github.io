@@ -1,0 +1,21 @@
+---
+title: "Newton's Productive Quarentine"
+description: |
+  We aren't the first ones to work from home.
+author:
+  - name: Ambuj Gupta
+    url: {}
+date: 03-23-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Loading ...
+
+
