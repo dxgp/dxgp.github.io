@@ -16,6 +16,6 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Loading ...
+![](https://i.natgeofe.com/n/faf6f6b2-3d6f-4fee-82ed-77a2f28c0063/11606.jpg){width=200px}
 
 
