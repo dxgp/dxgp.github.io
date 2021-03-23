@@ -6,7 +6,7 @@
       "description": "A blog for anything and everything we find interesting.",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-23T09:47:33+05:30"
+      "last_modified": "2021-03-23T10:03:36+05:30"
     },
     {
       "path": "courses.html",
@@ -14,14 +14,14 @@
       "description": "A list of good online courses and lectures.",
       "author": [],
       "contents": "\nEXA 1029\nEXA 2201\nEXA 221\nEXA 229\n\n\n\n",
-      "last_modified": "2021-03-23T09:47:33+05:30"
+      "last_modified": "2021-03-23T10:03:37+05:30"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-23T09:47:34+05:30"
+      "last_modified": "2021-03-23T10:03:37+05:30"
     }
   ],
   "collections": ["posts/posts.json"]
