@@ -38,6 +38,10 @@ That's just plain stupid! Wolfram lies in a different category. MATLAB is market
 
 >MATLAB is a programming and numeric computing platform used by millions of engineers and scientists to analyze data, develop algorithms, and create models.
 
+# Chapter 2
+
+Link to notes: https://www.icloud.com/iclouddrive/0uR4KHxhwZgekHbSlGJLbGzrA#Chapter2_MacKay
+
 
 
 
