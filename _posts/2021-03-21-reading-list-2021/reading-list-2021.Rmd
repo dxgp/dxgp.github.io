@@ -54,7 +54,7 @@ I do need to apply all that math. Here's my machine learning reading list. I sho
 
 * The Elements of Statistical Learning by Hastie et al.
 * Deep Learning by Ian Goodfellow
-* Tensorflow Documentation
+* Machine Learning: A Probabilistic Perspective by Kevin Murphy
 * The Nature of Statistical Learning Theory by Vladimir N. Vapnik
 
 ## Other Books that I Think Might be Worth Reading
