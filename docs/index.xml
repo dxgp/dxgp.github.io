@@ -12,7 +12,23 @@
       <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 May 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>PRML, Bishop</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-05-22-prml-bishop</link>
+      <description>A short description of the post.</description>
+      <guid>https://dxgp.github.io/posts/2021-05-22-prml-bishop</guid>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google's Tensor Processing Unit</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</link>
+      <description>Just my incoherent thoughts on Google's TPUs. ****UNDER CONSTRUCTION****</description>
+      <guid>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</guid>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Reading List 2021</title>
       <dc:creator>Gunjan Payal</dc:creator>
