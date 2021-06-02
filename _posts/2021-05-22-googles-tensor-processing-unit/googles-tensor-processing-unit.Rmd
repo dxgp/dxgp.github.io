@@ -45,11 +45,11 @@ Just read Patterson's article on it.
 
 This is a simple one. Lower precision arithmetic is faster. So, Google created a datatype that it calls *BFLOAT16* with 1 sign bit, 8 exponent bits and 7 significand precision bits. Surprisingly enough, Wikipedia was very informative on this.
 
-+-----------------------------------------------------------------------------------------------+------------------------------------------+
-| ![](images/Screenshot%202021-06-02%20at%202.58.01%20PM-01.png){width="504"}                   |                                          |
-|                                                                                               |                                          |
-| ![The "new" bfloat16](images/Screenshot%202021-06-02%20at%202.58.15%20PM-01.png){width="264"} |                                          |
-+-----------------------------------------------------------------------------------------------+------------------------------------------+
++-----------------------------------------------------------------------------------------------+---+
+| ![](images/Screenshot%202021-06-02%20at%202.58.01%20PM-01.png){width="504"}                   |   |
+|                                                                                               |   |
+| ![The "new" bfloat16](images/Screenshot%202021-06-02%20at%202.58.15%20PM-01.png){width="264"} |   |
++-----------------------------------------------------------------------------------------------+---+
 
 : Comparison
 
@@ -79,17 +79,13 @@ I should point out that it's \~90T inference ops/s. I'm more interested in train
 
 Then Google came out with TPUv2 in 2017? Google gave a presentation at the hotchips conference and the slides do a good job of how the TPUv2 evolved from 1st gen TPUs.
 
-+-----------------------------------------------------------------------------------+--------------------------------+
+|                                                                                   |                                |
+|-----------------------------------------------------------------------------------|--------------------------------|
 | ![](images/HC32_ML_Training_Google_Norrie_Patil.v01%20(dragged).png){width="400"} |                                |
-+-----------------------------------------------------------------------------------+--------------------------------+
 | ![](images/1.png){width="400"}                                                    | ![](images/2.png){width="400"} |
-+-----------------------------------------------------------------------------------+--------------------------------+
 | ![](images/4.png){width="400"}                                                    | ![](images/5.png){width="400"} |
-+-----------------------------------------------------------------------------------+--------------------------------+
 | ![](images/6.png){width="400"}                                                    | ![](images/7.png){width="400"} |
-+-----------------------------------------------------------------------------------+--------------------------------+
 | ![](images/8.png){width="400"}                                                    |                                |
-+-----------------------------------------------------------------------------------+--------------------------------+
 
 Now, to see the components in a little more detail, here's a little figure I created:
 

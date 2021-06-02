@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-06-02-project-gandalf/",
+    "title": "Project GANdalf",
+    "description": "A short post about a new project I've been thinking about.",
+    "author": [
+      {
+        "name": "Gunjan Payal",
+        "url": {}
+      }
+    ],
+    "date": "2021-06-02",
+    "categories": [],
+    "contents": "\nNow that I know PyTorch and a shit ton of statistics, I can finally begin to implement shit. So, I went to connectedpapers.com and I searched for the original GANs paper by Ian Goodfellow and looked at papers connected to it that very cited very often. Here’s the list I came up with:\nIn case you run into the same problem as me, i created a python script to rename the files with their title. I was too lazy to download Mendeley. It’s on my GitHub. Whatever.\nHigh-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs.pdf\nDeep Generative Stochastic Networks Trainable by Backprop.pdf\nReducing the Dimensionality of Data with Neural Networks.pdf\nAdversarial Autoencoders.pdf\nConditional Image Synthesis with Auxiliary Classiﬁer GANs.pdf\nProgressive Growing Of Gans For Improved Quality, Stability, And Variation.pdf\nLearning To Generate Samples From Noise Through Infusion Training.pdf\nGenerative Moment Matching Networks.pdf\nGANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium.pdf\nDualGAN: Unsupervised Dual Learning for Image-to-Image Translation.pdf\nConditional Generative Adversarial Nets.pdf\nPerceptual Losses for Real-Time Style Transfer and Super-Resolution.pdf\nImproved Techniques for Training GANs.pdf\nGenerative Adversarial Text to Image Synthesis.pdf\nPhoto-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.pdf\nDeep Generative Image Models using a Laplacian Pyramid of Adversarial Networks.pdf\nWhy Are Deep Nets Reversible.pdf\nUnsupervised Representation Learning With Deep Convolutional Gans.pdf\nImage-to-Image Translation with Conditional Adversarial Networks.pdf\nVariational Walkback: Learning a Transition Operator as a Stochastic Recurrent Net.pdf\nStackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks.pdf\nSo, here’s the goal. Implement all of these papers. Simple. Let’s give it a deadline. 4th July sounds good. So, I have one month to implement all of these papers.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-06-02T23:05:33+05:30",
+    "input_file": "project-gandalf.knit.md"
+  },
+  {
     "path": "posts/2021-05-22-prml-bishop/",
     "title": "PRML, Bishop",
     "description": "A short description of the post.",

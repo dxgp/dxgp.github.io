@@ -12,7 +12,15 @@
       <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 22 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Project GANdalf</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-06-02-project-gandalf</link>
+      <description>A short post about a new project I've been thinking about.</description>
+      <guid>https://dxgp.github.io/posts/2021-06-02-project-gandalf</guid>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>PRML, Bishop</title>
       <dc:creator>Gunjan Payal</dc:creator>
