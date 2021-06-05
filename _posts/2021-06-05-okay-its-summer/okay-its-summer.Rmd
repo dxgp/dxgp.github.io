@@ -1,0 +1,70 @@
+---
+title: "Okay, it's summer."
+description: |
+  I have to decide what to work on this summer.
+author:
+  - name: Gunjan Payal
+    url: {}
+date: 06-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+So, I did this project on TPUs and their architecture. I figured out two things:
+
+1.  TPUs are neither new nor are they exclusive to Google. There are so many TPUs now. (AMD's still lagging a little but I think they'll catch up).
+2.  I hate hardware.
+
+If I don't have a concrete list of what I want to learn, here's what happens:
+
+    for i in range(len(summer_vacation)):
+      new_proj = randomThought(1)
+      new_proj = random_thought(2)
+      new_proj = random_thought(3)
+      new_proj = random_thought(4)
+
+    def random_thought(num_thought):
+      if num_thought==1:
+        projects = []
+        pno = np.random.randint(0,len(projects))
+        return projects[pno]
+      elif num_thought==2: frustration(level="low")
+      elif num_thought==3: frustration(level="medium")
+      elif num_thought>3: 
+        frustration(level="high") 
+        return "PANIC MODE"
+
+    def frustration(level):
+      if level=="low": pass
+      elif level=="medium":pass
+      elif level=="high": watchRandomYoutubeVideos()
+      else: return 0
+
+```{=html}
+<aside>I started writing the code as a joke but I got carried away.</aside>
+```
+I'll start working on implementing something in PyTorch and then I'll think about protein folding and how much progress DeepMind has made. I'll then want to learn biochemistry. Then I'll realize that biochemistry needs chemistry and that I hate chemistry. I'll get frustrated and watch Netflix and postpone the project until the next day.
+
+Okay. The best place to start is by defining a goal. Here's the goal: *solidify theoretical foundations for deep learning*. So, my to do list would look something like:
+
+------------------------------------------------------------------------
+
+1.  Read "Pattern Recognition and Machine Learning" by Bishop.
+2.  Finish reading "Information Theory, Inference and Learning Algorithms".
+3.  Finish Analysis 1 by Terry Tao.
+4.  Complete nanodiff (with CNN,RNN,LSTMs,GANs and anything else you can think of).
+5.  Get project GANdalf past the finish line.
+6.  Learn about compression algorithms. (Hutter Prize)
+
+------------------------------------------------------------------------
+
+It seems doable. I always set unrealistic goals and it's a little abnormal that these goals seem achievable. That's a first for me.
+
+I was going to work on a review paper ("ASICs for Deep Learning"), but it seemed dull, so I tossed it in the trash.
+
+In other news, I'm currently reading Sipser's book on theory of computation and it seems interesting so far. I have my final lab test (Network and Communication) on Monday and I don't I can get myself to study for it. Blehhhhhhh.

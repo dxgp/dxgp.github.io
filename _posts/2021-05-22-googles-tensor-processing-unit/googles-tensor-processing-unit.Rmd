@@ -1,7 +1,7 @@
 ---
 title: "Google's Tensor Processing Unit"
 description: |
-  Just my incoherent thoughts on Google's TPUs. ****UNDER CONSTRUCTION****
+  Just my incoherent thoughts on Google's TPUs.
 author:
   - name: Gunjan Payal
     url: {}

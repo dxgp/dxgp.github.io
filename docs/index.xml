@@ -12,7 +12,15 @@
       <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 02 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Okay, it's summer.</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-06-05-okay-its-summer</link>
+      <description>I have to decide what to work on this summer.</description>
+      <guid>https://dxgp.github.io/posts/2021-06-05-okay-its-summer</guid>
+      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Project GANdalf</title>
       <dc:creator>Gunjan Payal</dc:creator>
@@ -22,29 +30,20 @@
       <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Google's Tensor Processing Unit</title>
+      <dc:creator>Gunjan Payal</dc:creator>
+      <link>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</link>
+      <description>Just my incoherent thoughts on Google's TPUs.</description>
+      <guid>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</guid>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>PRML, Bishop</title>
       <dc:creator>Gunjan Payal</dc:creator>
       <link>https://dxgp.github.io/posts/2021-05-22-prml-bishop</link>
       <description>A short description of the post.</description>
       <guid>https://dxgp.github.io/posts/2021-05-22-prml-bishop</guid>
       <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google's Tensor Processing Unit</title>
-      <dc:creator>Gunjan Payal</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</link>
-      <description>Just my incoherent thoughts on Google's TPUs. ****UNDER CONSTRUCTION****</description>
-      <guid>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</guid>
-      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Reading List 2021</title>
-      <dc:creator>Gunjan Payal</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-03-21-reading-list-2021</link>
-      <description>Just a list of books that I plan on finishing by the end of 2021.</description>
-      <guid>https://dxgp.github.io/posts/2021-03-21-reading-list-2021</guid>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://media.wired.com/photos/593252a2a31264584499416b/master/w_1600%252Cc_limit/the-homer-inline2.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Notes on David MacKay's Information Theory, Inference and Learning Algorithms</title>
