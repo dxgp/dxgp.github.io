@@ -5,7 +5,6 @@ description: |
 output_dir: "docs"
 base_url: https://dxgp.github.io/
 favicon: data/main_logo.png
-theme: theme.css
 navbar:
   left:
     - text: "Courses"
