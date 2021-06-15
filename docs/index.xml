@@ -4,7 +4,7 @@
     <title>dxgp</title>
     <link>https://dxgp.github.io/</link>
     <atom:link href="https://dxgp.github.io/index.xml" rel="self" type="application/rss+xml"/>
-    <description>A blog for anything and everything we find interesting.
+    <description>A blog for anything and everything I find interesting.
 </description>
     <image>
       <title>dxgp</title>
@@ -12,37 +12,13 @@
       <link>https://dxgp.github.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Okay, it's summer.</title>
-      <dc:creator>Gunjan Payal</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-06-05-okay-its-summer</link>
-      <description>I have to decide what to work on this summer.</description>
-      <guid>https://dxgp.github.io/posts/2021-06-05-okay-its-summer</guid>
-      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Project GANdalf</title>
-      <dc:creator>Gunjan Payal</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-06-02-project-gandalf</link>
-      <description>A short post about a new project I've been thinking about.</description>
-      <guid>https://dxgp.github.io/posts/2021-06-02-project-gandalf</guid>
-      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sat, 22 May 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Google's Tensor Processing Unit</title>
       <dc:creator>Gunjan Payal</dc:creator>
       <link>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</link>
       <description>Just my incoherent thoughts on Google's TPUs.</description>
       <guid>https://dxgp.github.io/posts/2021-05-22-googles-tensor-processing-unit</guid>
-      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>PRML, Bishop</title>
-      <dc:creator>Gunjan Payal</dc:creator>
-      <link>https://dxgp.github.io/posts/2021-05-22-prml-bishop</link>
-      <description>A short description of the post.</description>
-      <guid>https://dxgp.github.io/posts/2021-05-22-prml-bishop</guid>
       <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
     </item>
     <item>

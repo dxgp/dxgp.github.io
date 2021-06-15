@@ -1,7 +1,7 @@
 ---
 title: "About this blog"
 description: |
-  A blog for anything and everything we find interesting.
+  A blog for anything and everything I find interesting. Seriously, just read Chris Olah's blog. It's awesome.
 ---
 
 ```{r setup, include=FALSE}

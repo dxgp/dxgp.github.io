@@ -1,7 +1,7 @@
 name: "blog"
 title: "dxgp"
 description: |
-  A blog for anything and everything we find interesting.
+  A blog for anything and everything I find interesting.
 output_dir: "docs"
 base_url: https://dxgp.github.io/
 favicon: data/main_logo.png
@@ -9,6 +9,6 @@ navbar:
   left:
     - text: "Courses"
       href: courses.html
-    - text: "About Us"
+    - text: "About"
       href: about.html
 output: distill::distill_article

@@ -1,39 +1,5 @@
 [
   {
-    "path": "posts/2021-06-05-okay-its-summer/",
-    "title": "Okay, it's summer.",
-    "description": "I have to decide what to work on this summer.",
-    "author": [
-      {
-        "name": "Gunjan Payal",
-        "url": {}
-      }
-    ],
-    "date": "2021-06-05",
-    "categories": [],
-    "contents": "\nSo, I did this project on TPUs and their architecture. I figured out two things:\nTPUs are neither new nor are they exclusive to Google. There are so many TPUs now. (AMD’s still lagging a little but I think they’ll catch up).\nI hate hardware.\nIf I don’t have a concrete list of what I want to learn, here’s what happens:\nfor i in range(len(summer_vacation)):\n  new_proj = randomThought(1)\n  new_proj = random_thought(2)\n  new_proj = random_thought(3)\n  new_proj = random_thought(4)\n\ndef random_thought(num_thought):\n  if num_thought==1:\n    projects = []\n    pno = np.random.randint(0,len(projects))\n    return projects[pno]\n  elif num_thought==2: frustration(level=\"low\")\n  elif num_thought==3: frustration(level=\"medium\")\n  elif num_thought>3: \n    frustration(level=\"high\") \n    return \"PANIC MODE\"\n\ndef frustration(level):\n  if level==\"low\": pass\n  elif level==\"medium\":pass\n  elif level==\"high\": watchRandomYoutubeVideos()\n  else: return 0\nI started writing the code as a joke but I got carried away.I’ll start working on implementing something in PyTorch and then I’ll think about protein folding and how much progress DeepMind has made. I’ll then want to learn biochemistry. Then I’ll realize that biochemistry needs chemistry and that I hate chemistry. I’ll get frustrated and watch Netflix and postpone the project until the next day.\nOkay. The best place to start is by defining a goal. Here’s the goal: solidify theoretical foundations for deep learning. So, my to do list would look something like:\nRead “Pattern Recognition and Machine Learning” by Bishop.\nFinish reading “Information Theory, Inference and Learning Algorithms”.\nFinish Analysis 1 by Terry Tao.\nComplete nanodiff (with CNN,RNN,LSTMs,GANs and anything else you can think of).\nGet project GANdalf past the finish line.\nLearn about compression algorithms. (Hutter Prize)\nIt seems doable. I always set unrealistic goals and it’s a little abnormal that these goals seem achievable. That’s a first for me.\nI was going to work on a review paper (“ASICs for Deep Learning”), but it seemed dull, so I tossed it in the trash.\nIn other news, I’m currently reading Sipser’s book on theory of computation and it seems interesting so far. I have my final lab test (Network and Communication) on Monday and I don’t I can get myself to study for it. Blehhhhhhh.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-06-05T16:15:43+05:30",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2021-06-02-project-gandalf/",
-    "title": "Project GANdalf",
-    "description": "A short post about a new project I've been thinking about.",
-    "author": [
-      {
-        "name": "Gunjan Payal",
-        "url": {}
-      }
-    ],
-    "date": "2021-06-02",
-    "categories": [],
-    "contents": "\nNow that I know PyTorch and a shit ton of statistics, I can finally begin to implement shit. So, I went to connectedpapers.com and I searched for the original GANs paper by Ian Goodfellow and looked at papers connected to it that very cited very often. Here’s the list I came up with:\nIn case you run into the same problem as me, i created a python script to rename the files with their title. I was too lazy to download Mendeley. It’s on my GitHub. Whatever.\nHigh-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs.pdf\nDeep Generative Stochastic Networks Trainable by Backprop.pdf\nReducing the Dimensionality of Data with Neural Networks.pdf\nAdversarial Autoencoders.pdf\nConditional Image Synthesis with Auxiliary Classiﬁer GANs.pdf\nProgressive Growing Of Gans For Improved Quality, Stability, And Variation.pdf\nLearning To Generate Samples From Noise Through Infusion Training.pdf\nGenerative Moment Matching Networks.pdf\nGANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium.pdf\nDualGAN: Unsupervised Dual Learning for Image-to-Image Translation.pdf\nConditional Generative Adversarial Nets.pdf\nPerceptual Losses for Real-Time Style Transfer and Super-Resolution.pdf\nImproved Techniques for Training GANs.pdf\nGenerative Adversarial Text to Image Synthesis.pdf\nPhoto-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.pdf\nDeep Generative Image Models using a Laplacian Pyramid of Adversarial Networks.pdf\nWhy Are Deep Nets Reversible.pdf\nUnsupervised Representation Learning With Deep Convolutional Gans.pdf\nImage-to-Image Translation with Conditional Adversarial Networks.pdf\nVariational Walkback: Learning a Transition Operator as a Stochastic Recurrent Net.pdf\nStackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks.pdf\nSo, here’s the goal. Implement all of these papers. Simple. Let’s give it a deadline. 4th July sounds good. So, I have one month to implement all of these papers.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-06-02T23:05:33+05:30",
-    "input_file": {}
-  },
-  {
     "path": "posts/2021-05-22-googles-tensor-processing-unit/",
     "title": "Google's Tensor Processing Unit",
     "description": "Just my incoherent thoughts on Google's TPUs.",
@@ -48,23 +14,6 @@
     "contents": "\nGoogle introduced TPUs in 2016. Tensor Processing Units or TPUs are Application Speciﬁc Integrated Circuits (ASICs) that are optimized for low precision, high volume matrix computations. Low precision, high volume calculations are the bedrock of NN training and the most widespread use (as well as the originally intended use) of TPUs is to accelerate neural network training and inference.\nGPUs originated from the gaming community because a CPU could not handle specialised tasks such as rasterisation, texture mapping, frame buffer operations etc. The deep learning community adopted GPUs and has continued to use them and extend their capabilities. However, further performance gains could not be extracted via the addition of transistors alone. As a more spearheaded approach, TPUs were conceived with the idea that removing graphics capabilities and focusing on matrix multiplication capabilities could lead to better performance and power efﬁciency.\n\nAs is the case with a lot of new advancements, the theoretical component needed to make this leap already existed. Work on systolic matrix multiplication had existed since the 1980s and it was put to use in TPUs. Three versions of TPUs have been released with v2 and v3 being accessible to the general public via Google Cloud.\n\nBackground\nSystolic Architectures\nSystolic architecture design is a general methodology for mapping high level computations into hardware structures developed at Carnegie Melon University around 1980.\nSystolic architecture gets its name from analogising the human heart, which pumps oxygenated blood throughout the body and receives deoxygenated blood back from the organs with a computer’s memory, which pumps data throughout the processing units and gets processed data back.\nWhen the number of operations is greater than the total number of I/O elements, the task is said to be “Compute Bound”. In the reverse case, the task is said to be “I/O bound”.\nAs an example, matrix multiplication is a compute bound task while matrix addition is an I/O bound task.\nThe original paper on systolic architectures is fairly accessible. In case you’re interested, the paper’s titled “Why Systolic Architectures?” by H.T. Kung. (http://www.eecs.harvard.edu/~htk/publication/1982-kung-why-systolic-architecture.pdf)\n\nSystolic architectures can only speed up tasks that are compute bound.\n\nRoofline Graphs\nJust read Patterson’s article on it.\nbfloat16\nThis is a simple one. Lower precision arithmetic is faster. So, Google created a datatype that it calls BFLOAT16 with 1 sign bit, 8 exponent bits and 7 significand precision bits. Surprisingly enough, Wikipedia was very informative on this.\nComparison\n\nThe “new” bfloat16\n\nThe Evolution of TPUs\nTPUv1\nThere’s a real deficit of good quality training chips. NVidia has a monopoly on these things. Seriously, try to find a chip that’s powerful, natively supported by Python and not made by NVidia and the whole thing starts to look a lot like a monopoly.\nNVidia V100 is $8,799. Holy crap! That’s a lot of money for a chip.\nArchitecture\n\nIt looks a little intimidating at first glance but there’s really only a few noteworthy things.\nBandwidth Gap - DDR3 -> MMU is about 30GiB/s and Systolic Data Setup->MMU is about 167GiB/s. That’s a huge gap. When we consider how expensive retreiving something from RAM is, we start to see why we need systolic architectures.\nMatrix Multiply Unit\nCommon Neural Network Layers\n\nTPU v1 is manufactured on a 28 nm process with a die size ≤ 331 mm2, clock speed of 700 MHz, 28 MB of on-chip memory, 4 MB of 32-bit accumulators, and a 256×256 systolic array of 8-bit multipliers. For this reason, we can get 700Mhz*65536 (multipliers) → 92 Tera operations/sec. TPU v1 has an 8 GB dual-channel 2133 MHz DDR3 SDRAM offering 34 GB/s of bandwidth. It has thermal design power of 28-40 Watts, which is certainly low consumption compared to GPUs and CPUs.\n\nI should point out that it’s ~90T inference ops/s. I’m more interested in training than inference but it’s insanely fast.\nTPUv2\nThen Google came out with TPUv2 in 2017? Google gave a presentation at the hotchips conference and the slides do a good job of how the TPUv2 evolved from 1st gen TPUs.\n\n\n\n\n\n\n\n\n\n\nNow, to see the components in a little more detail, here’s a little figure I created:\n\nSo, how fast is it?\nOriginally, I was going to perform all experiments on TPUv3 via Google Cloud but that is such a pain! So, I decided to buy Colab Pro, and set the compute to TPU and High-Ram. PyTorch was recently modified to work on XLA devices which out TPU is. I’m proficient in PyTorch and it was fun to create these benchmarks. I’m not presenting the results until I hear from AWS about my GPU. I want to run them in a tightly controlled environment.\nHere’s the GitHub Repo: https://github.com/dxgp/TPU_PyTorch.git\n\n\n\n",
     "preview": {},
     "last_modified": "2021-06-05T16:14:09+05:30",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2021-05-22-prml-bishop/",
-    "title": "PRML, Bishop",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Gunjan Payal",
-        "url": {}
-      }
-    ],
-    "date": "2021-05-22",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-05-22T16:27:19+05:30",
     "input_file": {}
   },
   {
