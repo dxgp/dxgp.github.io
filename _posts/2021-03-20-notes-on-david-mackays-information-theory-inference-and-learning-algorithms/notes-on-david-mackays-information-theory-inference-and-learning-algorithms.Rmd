@@ -38,7 +38,7 @@ I mean, the syntax is so clunky, it makes my blood boil.
 So, I use Mathematica for experimenting with stuff. It's really quick
 and the plotting works flawlessly. The only issue I have is that it
 doesn't work natively on my M1 Mac. It's a little annoying but, I can
-learn to live with it. 
+learn to live with it.
 
 # Chapter 2
 
@@ -84,25 +84,29 @@ properties:
 
 ### Problem Statement
 
-::: {.displayquote}
-*You are given 12 balls, all equal in weight except for one that is
-either heavier or lighter. You are also given a two-pan balance to use.
-In each use of the balance you may put any number of the 12 balls on the
-left pan, and the same number on the right pan, and push a button to
-initiate the weighing; there are three possible outcomes: either the
-weights are equal, or the balls on the left are heavier, or the balls on
-the left are lighter. Your task is to design a strategy to determine
-which is the odd ball and whether it is heavier or lighter than the
-others in as few uses of the balance as possible.*
-:::
+> ::: {.displayquote}
+> *You are given 12 balls, all equal in weight except for one that is
+> either heavier or lighter. You are also given a two-pan balance to
+> use. In each use of the balance you may put any number of the 12 balls
+> on the left pan, and the same number on the right pan, and push a
+> button to initiate the weighing; there are three possible outcomes:
+> either the weights are equal, or the balls on the left are heavier, or
+> the balls on the left are lighter. Your task is to design a strategy
+> to determine which is the odd ball and whether it is heavier or
+> lighter than the others in as few uses of the balance as possible.*
+> :::
 
+<aside>
 *Fun fact*: This problem was featured on Brooklyn Nine-Nine and I had
 been trying to solve it for a while. I found the solution! Who knew it
 was in information theory? The form of the problem is slightly
 different. It's islanders instead of balls. In case you're wondering
-which episode this was, it was *S02E18*.\
+which episode this was, it was *S02E18*.
+</aside>
+
 The key to solving this problem is realising that the information gain
-is maximised when there are as many equiprobable outcomes as possible.\
+is maximised when there are as many equiprobable outcomes as possible.
+
 Don't get it? Don't worry, here the math:
 
 We have, $$\sum_x P(x)log(\frac{1}{P(x)}) = H(X)$$
@@ -113,7 +117,9 @@ $f(x)=log(x)$ $$\begin{aligned}
     \sum_x P(x)log(\frac{1}{P(x)}) & \leq f(|A_x|) \\
     H(X) & \leq log(|A_x|)\end{aligned}$$
 
-The equality holds only when all the outcomes are equiprobable.\
+The equality holds only when all the outcomes are equiprobable.
+
+\
 So, the *best* strategy is dividing it up into equiprobable outcomes.
 Even in Brooklyn Nine Nine, when Amy started with *"we weight six
 against six..."* Holt immediately stopped her and told her that it would
@@ -146,7 +152,7 @@ less than 24. Three weighings creates $3^3=27$ branches which is a
 little over 24. So, it's theoretically impossible to find the right
 hypothesis in less than three weighings if we assume that we're dividing
 it into 3 equiprobable outcomes at every step. If you can find a
-strategy with 4 equiprobable outcomes per step, shoot me an email.\
+strategy with 3 equiprobable outcomes per step, shoot me an email.\
 
 # The Theoretical Limits of Compression
 
