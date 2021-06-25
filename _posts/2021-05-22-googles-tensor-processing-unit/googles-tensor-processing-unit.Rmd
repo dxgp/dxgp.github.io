@@ -9,90 +9,240 @@ date: 05-22-2021
 output:
   distill::distill_article:
     self_contained: false
+editor_options: 
+  markdown: 
+    wrap: 72
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Google introduced TPUs in 2016. Tensor Processing Units or TPUs are Application Speciﬁc Integrated Circuits (ASICs) that are optimized for low precision, high volume matrix computations. Low precision, high volume calculations are the bedrock of NN training and the most widespread use (as well as the originally intended use) of TPUs is to accelerate neural network training and inference.
+# Theoretical Background
 
-GPUs originated from the gaming community because a CPU could not handle specialised tasks such as *rasterisation, texture mapping, frame buffer operations* etc. The deep learning community adopted GPUs and has continued to use them and extend their capabilities. However, further performance gains could not be extracted via the addition of transistors alone. As a more spearheaded approach, TPUs were conceived with the idea that removing graphics capabilities and focusing on matrix multiplication capabilities could lead to better performance and power efﬁciency.
+GPUs originated from the gaming community because a CPU could not handle
+specialised tasks such as rasterisation, texture mapping, frame buffer
+operations etc @Harris2005Mapping2. The deep learning community adopted
+GPUs and has continued to use them and extend their
+capabilities[@Navarro2020GPUReductions].
 
-> As is the case with a lot of new advancements, the theoretical component needed to make this leap already existed. Work on systolic matrix multiplication had existed since the 1980s and it was put to use in TPUs. Three versions of TPUs have been released with v2 and v3 being accessible to the general public via Google Cloud.
+However, further performance gains could not be extracted via the
+addition of transistors alone. As a more spearheaded approach, TPUs were
+conceived with the idea[@Jouppi2018MotivationUnitb] that removing
+graphics capabilities and focusing on matrix multiplication capabilities
+could lead to better performance and power efficiency.
 
-# Background
+\
+As is the case with a lot of new advancements, the theoretical component
+needed to make this leap already existed. Work on *systolic matrix
+multiplication* had existed since the 1980s and it was put to use in
+TPUs.
 
-### Systolic Architectures
+Three versions of TPUs have been released with v2 and v3 being
+accessible to the general public via Google Cloud.
 
-Systolic architecture design is a general methodology for mapping high level computations into hardware structures developed at Carnegie Melon University around 1980.
+## Systolic Architectures
 
-Systolic architecture gets its name from analogising the human heart, which pumps oxygenated blood throughout the body and receives deoxygenated blood back from the organs with a computer's memory, which pumps data throughout the processing units and gets processed data back.
+Systolic architecture design is a general methodology for mapping high
+level computations into hardware structures developed at Carnegie Melon
+University around 1980[@Kung1982WhyArchitectures].
 
-When the number of operations is greater than the total number of I/O elements, the task is said to be "Compute Bound". In the reverse case, the task is said to be "I/O bound".
+\
+Systolic architecture gets its name from analogising the human heart,
+which pumps oxygenated blood throughout the body and receives
+de-oxygenated blood back from the organs with a computer's memory, which
+*pumps* data throughout the processing units and gets processed data
+back.\
+When the number of operations is greater than the total number of I/O
+elements, the task is said to be *"Compute Bound"*. In the reverse case,
+the task is said to be *"I/O bound"*. As an example, matrix
+multiplication is a compute bound task while matrix addition is an I/O
+bound task.[@Williams2009Roofline:Architecturesb]
 
-As an example, matrix multiplication is a compute bound task while matrix addition is an I/O bound task.
+\
+Systolic architectures have found applications in various mathematical
+computations [@Milovanovic2010Forty-threeMultiplication] but they can
+only speed up tasks that are compute bound.
 
-The original paper on systolic architectures is fairly accessible. In case you're interested, the paper's titled *"Why Systolic Architectures?" by H.T. Kung*. (<http://www.eecs.harvard.edu/~htk/publication/1982-kung-why-systolic-architecture.pdf>)
+# Evolution of TPUs
 
-> Systolic architectures can only speed up tasks that are compute bound.
+## TPUv1
 
-### Roofline Graphs
+Google's TPU v1 was put into production in 2015 and it was used
+internally by Google for their applications. In 2017 Google finally
+published a technical description of the chip called "In-Datacenter
+Performance Analysis of a Tensor Processing Unit"
+[@Jouppi2017In-DatacenterUnit].
 
-Just read Patterson's article on it.
+\
+TPUv1 was designed as a coprocessor with a PCIe Gen3 x16 bus ( 12GB/s
+bandwidth). Similar to a GPU, it was designed to work with existing
+infrastructure and one server could be connected to 4 TPUs. A TPU is
+more like an FPU (Floating Point Unit) than a GPU because the host sends
+the instructions to the TPU whereas a GPU fetches the instructions on
+its own.
 
-### bfloat16
+The central piece of the TPU is the MMU (Matrix Multiply Unit). This is
+the component that is based on systolic architectures. It contains
+256x256 MAC (multiply and accumulate) units that can perform *8-bit
+multiplications and additions on signed or unsigned integers*. This
+means that:
 
-This is a simple one. Lower precision arithmetic is faster. So, Google created a datatype that it calls *BFLOAT16* with 1 sign bit, 8 exponent bits and 7 significand precision bits. Surprisingly enough, Wikipedia was very informative on this.
+$$T = 256*256\ ops * 700MHz$$ $$= 45.2 T ops/s$$ These are just multiply
+operations. So, adding the addition operations,
+$$T = 45.2 * 2 \approx 90 T ops/s$$
 
-+-----------------------------------------------------------------------------------------------+---+
-| ![](images/Screenshot%202021-06-02%20at%202.58.01%20PM-01.png){width="504"}                   |   |
-|                                                                                               |   |
-| ![The "new" bfloat16](images/Screenshot%202021-06-02%20at%202.58.15%20PM-01.png){width="264"} |   |
-+-----------------------------------------------------------------------------------------------+---+
+The weights for the matrix unit are staged through an on-chip Weight
+FIFO that reads from an off-chip 8 GB DRAM called Weight Memory (two
+2133MHz DDR3 DRAM channels) for inference, weights are read-only. 8 GB
+supports many simultaneously active models.
 
-: Comparison
+\
+The 16-bit products are collected in the 4 MB of 32-bit Accumulators
+below the matrix unit. The 4MB represents 4096, 256-element, 32-bit
+accumulators.
 
-# The Evolution of TPUs
+\
+The matrix unit produces one 256-element partial sum per clock cycle.
+When using a mix of 8-bit weights and 16-bit activations (or vice
+versa), the Matrix Unit computes at half-speed, and it computes at a
+quarter-speed when both are 16 bits.The intermediate results are held in
+the 24 MB on-chip Unified Buffer, which can serve as inputs to the
+Matrix Unit. A programmable DMA controller transfers data to or from CPU
+Host memory and the Unified Buffer. The 24 MB Unified Buffer is almost a
+third of the die and the Matrix Multiply Unit is a
+quarter.[@Sato2017AnBlog]
 
-### TPUv1
+\
+The TPU ASIC is built on a 28nm process and consumes 40W when running
+(75W TDP). TPU implements the matrix multiplication with the systolic
+array in a pipeline fashion. It relies on data from different directions
+arriving at cells in an array at regular intervals and being combined.\
 
-There's a real deficit of good quality training chips. NVidia has a monopoly on these things. Seriously, try to find a chip that's powerful, natively supported by Python and not made by NVidia and the whole thing starts to look a lot like a monopoly.
+![The TPUv1 Schematic](images/TPUv1_Schematic-01.jpg)
 
-NVidia V100 is \$8,799. Holy crap! That's a lot of money for a chip.
+## TPUv2
 
-#### Architecture
+TPU v2 was unveiled at Google I/O in May 2017, two years later. While
+TPU v1 is a coprocessor, controlled by the host, TPU v2 and successors
+are Turing-complete and are suitable for both training and inference.
+Importantly, TPU v2 was built for multi-chip configurations because it
+became critical due to heavy production workloads --- a single TPU v2
+would take 60--400 days for some of them.
 
-![](images/TPUv1_Schematic.jpg "TPUv1 Architecture"){width="564"}
+\
+A "Cloud TPU" is a TPU board with 4 TPU chips connected through PCI to a
+host virtual machine.
 
-It looks a little intimidating at first glance but there's really only a few noteworthy things.
+\
+Each TPU chip contains two cores with 8 GiB of HBM (high-bandwidth
+memory) and one matrix unit (MXU) for each TPU core. TPU v2 is connected
+to the host by PCIe Gen3 x32. The MXU provides the bulk of computing
+power in a TPU chip. Each MXU is capable of performing 16K (128x128)
+multiply-accumulate operations in each cycle at reduced
+bfloat16[@Wang2019BFloat16:TPUs][@Kalamkar2019ATrainingb] (BF16)
+precision. It is supported by a vector processing unit that performs all
+the other computations in typical training
+workloads.[@Patterson201850Setb]
 
-1.  **Bandwidth Gap** - DDR3 -\> MMU is about 30GiB/s and Systolic Data Setup-\>MMU is about 167GiB/s. That's a huge gap. When we consider how expensive retreiving something from RAM is, we start to see why we need systolic architectures.
-2.  **Matrix Multiply Unit**
-3.  **Common Neural Network Layers**
+\
+Matrix multiplications are performed with BF16 inputs but all
+accumulations happen in FP32 so the resulting matrix is
+FP32[@Courbariaux2014TrainingMultiplications]. All other computations
+are in FP32 except for results going directly to an MXU input, which are
+converted to BF16.\
 
-> *TPU v1 is manufactured on a 28 nm process with a die size ≤ 331 mm2, clock speed of 700 MHz, 28 MB of on-chip memory, 4 MB of 32-bit accumulators, and a 256×256 systolic array of 8-bit multipliers. For this reason, we can get 700Mhz\*65536 (multipliers) → 92 Tera operations/sec. TPU v1 has an 8 GB dual-channel 2133 MHz DDR3 SDRAM offering 34 GB/s of bandwidth. It has thermal design power of 28-40 Watts, which is certainly low consumption compared to GPUs and CPUs.*
+The Scalar Unit fetches VLIW[@Fisher1984TheCode] (Very Long Instruction
+Word) instructions from the core's on-chip, software-managed Instruction
+Memory (Imem), executes scalar operations using a 4K 32-bit scalar data
+memory (Smem) and 32 32-bit scalar registers (Sregs), and forwards
+vector instructions to the Vector Unit. The 322-bit VLIW instruction can
+launch eight operations: two scalar, two vector ALU, vector load and
+store, and a pair of slots that queue data to and from the matrix
+multiply and transpose units. The XLA compiler[@PyTorch2020PyTorchXLA]
+schedules loading Imem via independent overlays of code, as unlike
+conventional CPUs, there is no instruction cache.
 
-I should point out that it's \~90T inference ops/s. I'm more interested in training than inference but it's insanely fast.
+\
+The Vector Unit performs vector operations using a large on-chip vector
+memory (Vmem) with 32K 128 x 32-bit elements (16MB), and 32 2D vector
+registers (Vregs) each containing 128 x 8 32-bit elements (4 KB). The
+Vector Unit streams data to and from the MXU through decoupling FIFOs.
+The Vector Unit collects and distributes data to Vmem via data-level
+parallelism (2D matrix and vector functional units) and instruction-
+level parallelism (8 operations per instruction).
 
-### TPUv2
+\
+The Transpose, Reduction, Permute Unit performs efficient common matrix
+transformations. ICI enables direct connections between chips (500 GB/s
+per link) to form a supercomputer using only 13% of each chip. Direct
+links simplify rack-level deployment, but in a multi-rack system, the
+racks must be adjacent. TPU v1 was memory bound for most of its
+applications. Engineers solved its memory bottleneck by using High
+Bandwidth Memory (HBM) DRAM in TPU v2 with 700 GB/s bandwidth instead of
+34 GB/s bandwidth of DDR3 in TPU v1. More on memory speed here. TPU v2
+delivers 22.5 TFLOPS per core, so 45 TFLOPS per chip and 180 TFLOPS per
+Cloud TPU card[@Shahid2020ANetworksb].\
 
-Then Google came out with TPUv2 in 2017? Google gave a presentation at the hotchips conference and the slides do a good job of how the TPUv2 evolved from 1st gen TPUs.
+![](images/TPUv2Core_Compiled-01.jpg "TPUv2 Compiled Schematic")
 
-|                                                                                   |                                |
-|-----------------------------------------------------------------------------------|--------------------------------|
-| ![](images/HC32_ML_Training_Google_Norrie_Patil.v01%20(dragged).png){width="400"} |                                |
-| ![](images/1.png){width="400"}                                                    | ![](images/2.png){width="400"} |
-| ![](images/4.png){width="400"}                                                    | ![](images/5.png){width="400"} |
-| ![](images/6.png){width="400"}                                                    | ![](images/7.png){width="400"} |
-| ![](images/8.png){width="400"}                                                    |                                |
+## TPUv3
 
-Now, to see the components in a little more detail, here's a little figure I created:
+TPU v3 was announced in May 2018 at Google I/O, only a year after the
+TPU v2. It's rather a gradual evolution of TPU v2, or maybe "TPU v2 done
+right" (in one deck Google called it "The Anti-Second System").
 
-![](images/TPUv2Core_Compiled.jpg)
+A "Cloud TPU v3" is still a TPU board with 4 TPU chips. Each TPU v3 chip
+contains two cores with 16 GB of HBM (increased size twice and bandwidth
+from 700 to 900 GB/s) and two matrix units (MXU) for each TPU core
+(instead of a single one in TPU v2). Now it is liquid-cooled (so the
+tubes on the photo).
 
-### So, how fast is it?
+TPU v3 delivers 420 TFLOPS per Cloud TPU card (due to twice the number
+of MXU and increased clock rate (940 MHz vs 700
+MHz)[@Teich2018TearingCoprocessor].
 
-Originally, I was going to perform all experiments on TPUv3 via Google Cloud but that is such a pain! So, I decided to buy Colab Pro, and set the compute to TPU and High-Ram. PyTorch was recently modified to work on XLA devices which out TPU is. I'm proficient in PyTorch and it was fun to create these benchmarks. I'm not presenting the results until I hear from AWS about my GPU. I want to run them in a tightly controlled environment.
+# Benchmarking TPUs
 
-Here's the GitHub Repo: <https://github.com/dxgp/TPU_PyTorch.git>
+## Methodology
+
+The main idea is to benchmark individual operations of the TPU. The
+question then remains what operations should be benchmarked. The
+operations are divided into 4 categories:
+
+1.  Basic Functions (Add, subtract, multiply, divide, power, sqrt, abs,
+    log, exp)
+
+2.  Activation Functions (ReLU, Leaky ReLU, sign, sigmoid, softplus,
+    relu6, hardswish, mish, log-softmax, tanh)
+
+3.  Matrix Multiplication (dot product, 2-D dot product, 3-D dot
+    product, 4-D dot product, 4-D sum, Matrix Multiplication)
+
+4.  Other Matrix Operations (Scalar multiplication, reverse scalar
+    multiplication, subtract, reverse subtract)
+
+For each operation, a function stress_test is called that first
+generates a matrix of a randomly selected integer size between size
+$2^i$ and $2^{i+1}$ and $i$ is increased until the TPU/GPU cannot handle
+the computation (A GPU throws a CUDA out of memory error while a TPU
+crashes). The decision to select a random integer that's not an exact
+power of 2 is based on the fact that these devices are optimized for
+sizes that are a power of 2. To get rid of this optimization factor and
+test raw power, the size is random and not a perfect power of 2.
+
+## Problems Encountered
+
+In order to compare TPUs and GPUs, I needed to rent a GPU in the cloud.
+However, Google was and still is refusing to grant my request for GPUs.
+I had to use GPUs available in the cloud and that presented a problem
+because Google Cloud run on a shared memory architecture. This means
+that the amount of memory in a system is not fixed. It varies depending
+on the current load on the system. This is problematic for benchmarking
+because the conditions cannot be controlled. I'll update this document
+if the situation changes.
+
+## Results
+
+On GitHub.

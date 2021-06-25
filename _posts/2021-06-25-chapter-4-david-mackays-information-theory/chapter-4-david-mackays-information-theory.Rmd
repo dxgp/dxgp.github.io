@@ -1,55 +1,20 @@
 ---
-title: "Notes on David MacKay's Information Theory, Inference and Learning Algorithms"
+title: "Chapter 4: David MacKay's Information Theory"
 description: |
-  I recently started reading David MacKay's book and this blog post will contain my notes and thoughts on the book. I plan on using Mathematica for basic plotting and calculations.
+  A short description of the post.
+draft: true
 author:
   - name: Gunjan Payal
     url: {}
-date: 03-20-2021
+date: 06-25-2021
 output:
   distill::distill_article:
     self_contained: false
-draft: false
-editor_options: 
-  markdown: 
-    wrap: 72
+    
 ---
+# Introduction
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-Okay, let's start with the basics.
-
-# Why are you using Mathematica?
-
-I was a MATLAB person, primarily because that's what is used at our
-college. I got very comfortable with MATLAB and until a couple of months
-ago, I didn't have a preference.
-
-However, when I started focusing on the mathematical aspects, MATLAB
-became a huge pain. Yes, MATLAB has notebooks. Yes, MATLAB has markdown
-support. Yes, MATLAB is very efficient because it's built on top of
-FORTRAN. Yes, MATLAB has a huge user base. But here's where the problem
-begins. MATLAB did not start out this way. It didn't really have
-notebooks and stuff. Over the years, MATLAB has gotten INCREDIBLY messy.
-I mean, the syntax is so clunky, it makes my blood boil.
-
-So, I use Mathematica for experimenting with stuff. It's really quick
-and the plotting works flawlessly. The only issue I have is that it
-doesn't work natively on my M1 Mac. It's a little annoying but, I can
-learn to live with it. 
-
-# Chapter 2
-
-Link to notes:
-<https://www.icloud.com/iclouddrive/0uR4KHxhwZgekHbSlGJLbGzrA#Chapter2_MacKay>
-
-# Chapter 4
-
-## Introduction
-
-### Measuring Information
+## Measuring Information
 
 **Shannon's Information Content** $$h(x=a_i) = log_2(\frac{1}{P(x)})$$
 
@@ -80,11 +45,11 @@ properties:
         \end{aligned}$$ So, the logarithm does lend the information
     measure a few tricks.
 
-## The Weighing Problem
+# The Weighing Problem
 
-### Problem Statement
+## Problem Statement
 
-::: {.displayquote}
+::: displayquote
 *You are given 12 balls, all equal in weight except for one that is
 either heavier or lighter. You are also given a two-pan balance to use.
 In each use of the balance you may put any number of the 12 balls on the
@@ -115,12 +80,9 @@ $f(x)=log(x)$ $$\begin{aligned}
 
 The equality holds only when all the outcomes are equiprobable.\
 So, the *best* strategy is dividing it up into equiprobable outcomes.
-Even in Brooklyn Nine Nine, when Amy started with *"we weight six
-against six..."* Holt immediately stopped her and told her that it would
-never work.\
-
-![](images/puzzle.png)
-
+Even in Brooklyn Nine Nine, when Amy started with *\"we weight six
+against six\...\"* Holt immediately stopped her and told her that it
+would never work.\
 Here's a description of the optimal strategy in case the diagram seems
 confusing:
 
@@ -162,3 +124,32 @@ $$\begin{aligned}
     H_0 (x,y) & = log_2 |A_x||A_y| \\
             &= log_2 |A_x| + log_2 |A_y| \\
             &= H_0 (x) + H_0 (y)    \end{aligned}$$
+
+## A Simple Problem
+
+::: displayquote
+*Could $\exists$ a compressor $x \to c(x)$ and a decompressor
+$c(x) \to x$ such that every possible outcome is compressed into a
+binary code shorter than $H_0 (x)$ bits?*
+:::
+
+The answer is nope. Not without introducing a probabilistic element. We
+can't guarantee $c(x) \to x$ without $H_0 (x)$ bits. The word
+*guarantee* here is key. If we don't want a guarantee and we'd like to
+roll the dice to save space, we can do that. In fact, we do that a lot.
+Intuitively, it seems like that would never work but I don't see the
+world falling apart. Every now and then there's this guy who says he has
+created an *ideal* compressor that can compress all files. I think this
+guy hangs out with the guy who says that he has created a *perpetual
+motion device* (Clearly, he did not study thermodynamics).
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
