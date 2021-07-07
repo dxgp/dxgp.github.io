@@ -1,9 +1,0 @@
----
-title: "About this blog"
-description: |
-  A blog for anything and everything I find interesting. Seriously, just read Chris Olah's blog. It's awesome.
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
