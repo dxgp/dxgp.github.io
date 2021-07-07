@@ -1,0 +1,54 @@
+function hfun_bar(vname)
+  val = Meta.parse(vname[1])
+  return round(sqrt(val), digits=2)
+end
+
+function hfun_m1fill(vname)
+  var = vname[1]
+  return pagevar("index", var)
+end
+
+function lx_baz(com, _)
+  # keep this first line
+  brace_content = Franklin.content(com.braces[1]) # input string
+  # do whatever you want here
+  return uppercase(brace_content)
+end
+function blogpost_entry_html(link, title, y, m, d; ext=false)
+    return """
+        <p>
+          <a class=font-125 href="$link">
+            $title
+          </a>$(ifelse(ext, "<span>&nbsp;&#8599;</span>", ""))
+          <br>
+          <i data-feather=calendar></i>
+          <time datetime=$y-$m-$d>$(MONTH[m]) $d, $y</time><br>
+        </p>
+        """
+end
+
+function blogpost_entry(fpath)
+    rpath = joinpath("posts", fpath)
+    if isdir(rpath)
+        rpath = joinpath(rpath, "index.md")
+    end
+    hidden = pagevar(rpath, :hidden)
+    !isnothing(hidden) && hidden && return nothing
+    title = pagevar(rpath, :title)::String
+    y, m, d = getdate(fpath)
+    rpath = replace(fpath, r"\.md$" => "")
+    date = Date(y, m, d)
+    return (date, blogpost_entry_html("/posts/$rpath/", title, y, m, d))
+end
+
+
+function hfun_blogposts()
+    io = IOBuffer()
+    elements = filter!(!=("index.md"), readdir("posts"))
+    entries = [blogpost_entry(fp) for fp in elements]
+    sort!(entries, by=(e -> e[1]), rev=true)
+    for entry in entries
+        write(io, entry[2])
+    end
+    return String(take!(io))
+end

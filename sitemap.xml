@@ -2,31 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html</loc>
-    <lastmod>0001-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/index.html</loc>
+    <loc>https://dxgp.github.io/headers/menu3/index.html</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/404/index.html</loc>
+    <loc>https://dxgp.github.io/index.html</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu1/index.html</loc>
+    <loc>https://dxgp.github.io/posts/2021-07-08-post1/index.html</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu3/index.html</loc>
+    <loc>https://dxgp.github.io/posts/index.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://dxgp.github.io/404/index.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://dxgp.github.io/headers/menu1/index.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://dxgp.github.io/headers/menu2/index.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://dxgp.github.io/posts/2021-07-08-post2/index.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://dxgp.github.io/posts/2021-07-08-post3/index.html</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
